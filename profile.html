@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profile</title>
+<link rel="stylesheet" href="stylee.css">
+
+</head>
+<body>
+    <script>
+        function profile()
+        {
+            var a=document.getElementById("uname").value;
+            var b=document.getElementById("address").value;
+            var c=document.getElementById("email").value;
+            var d=document.getElementById("dob").value;
+            var e=document.getElementById("mobile").value;
+            var p=document.getElementById("photo").value;
+    
+            if(a==""||b==""||c==""||d==""||e==""||p=="")
+            {
+               alert("All fields are required");
+               return false;
+            }
+            if(e.length>10||e.length<10)
+        {
+            alert("Enter 10 digit number");
+            return false;
+        }
+        else if(isNaN(e))
+        {
+            alert("fill only numbers");
+        }
+        else{
+            true;
+        }
+    }
+</script>
+<h1>User Profile</h1>
+
+<div class="maindiv">
+<form onsubmit="return profile()">
+Username:<input type="username"
+name="username" id="uname"><br><br>
+<img align="right" src="prof.jpg" height="150px" width="150px">
+Address:<textarea value="address" id="address"></textarea>
+<br><br>
+Email:<input type="email"name="email" id="email"><br><br>
+DOB:<input type="date" name="calendar" id="dob"><br><br>
+Mobile no:<input type="tel" name="mobile" id="mobile"><br><br>
+Photo:<input type="file" name="photo" id="photo"><br><br>
+<h2>Registered Exams</h2>
+<div></div>
+UPSC 2024 : <input type="radio"
+id="Applied"
+name="exam"
+value="Applied">
+<label for="Applied">Applied</label><br>
+MPSC 2024 : <input type="radio"
+ id=" Applied"
+name="exam"
+value=" Applied">
+<label for=" Applied">Applied</label>
+</div>
+
+<input type="submit">
+</form>
+<p><a href="examination.html">Back to Home</a></p>
+</body>
+</html>
