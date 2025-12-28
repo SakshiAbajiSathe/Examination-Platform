@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <h1>Payment Page</h1>
+
+    <form action="/process-payment" method="POST">
+        <h2>Payment Details</h2>
+        <label for="card-name">Cardholder Name:</label><br>
+        <input type="text" id="card-name" name="card-name" required><br><br>
+
+        <label for="card-number">Card Number:</label><br>
+        <input type="text" id="card-number" name="card-number" required><br><br>
+
+        <label for="expiry-date">Expiry Date:</label><br>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required><br><br>
+
+        <label for="cvv">CVV:</label><br>
+        <input type="password" id="cvv" name="cvv" required><br><br>
+
+        <input type="submit" value="Make Payment">
+    </form>
+
+    <p><a href="examination.html">Back to Home</a></p>
+</body>
+</html>
