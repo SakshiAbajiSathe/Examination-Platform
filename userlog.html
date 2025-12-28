@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Online MPSC/UPSC Exam System</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
+</head>
+
+<body>
+    
+    
+<script>
+    function login()
+    {
+        var username=document.getElementById("uname").value;
+        var password=document.getElementById("pass").value;
+        if(username=="")
+        {
+           alert("Username is required.");
+           return false;
+        }
+        else if(password=="")
+        {
+           alert("Password is required.");
+           return false;
+        }
+        else if(password.length<6)
+        {
+            alert("password must be at least 6 characters long");
+            return false;
+        }
+        else
+        {
+        return true;
+        }
+    }
+</script> 
+<h1>Login</h1>
+    
+<form action="/login" method="POST" onsubmit="return login()">
+    <label for="username">Username:</label><br>
+    <input type="text"  name="username" id="uname" ><br><br>
+   <label for="password">Password:</label><br>
+    <input type="password"  name="password" id="pass"><br><br><br><br>
+    <input type="submit" value="Login"><br><br>
+</form>
+
+    <p><a href="examination.html">Back to Home</a></p>
+
+</body>
+</html>
