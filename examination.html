@@ -1,64 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UPSC/MPSC Premium Features</title>
-    <link rel="stylesheet" href="feature.css">
-    <link rel="stylesheet" href="grt-responsive-menu.css">
+    <title>Home - Online MPSC/UPSC Exam System</title>
+    <link rel="stylesheet" type="text/css" href="stylee.css">
 </head>
+     
 <body>
-    <header class="header">
-        <h1>UPSC/MPSC Premium Dashboard</h1>
-    </header>
-    <main class="container">
+    <style>
+        body{
+            background-image: url("gallery.jpg");
+        }
+        p{
+            font-family: 'Times New Roman', Times, serif;
+            text: size adjust 25px;
+            text-align: end;
+        }
         
-        <section class="mock-tests">
-            <h2>Mock Tests</h2>
-            <button class="btn">Take a Premium Test</button>
-            <p>Access detailed solutions and analytics!</p>
-        </section>
+     </style>
+    <h1>Welcome to MPSC/UPSC Online Exam Registration <img src="logo.jpg" height="40px" width="40px"></h1>
+   
+    <nav>
+        <ul>
+            <li><a href="home.html"><a><b>Home</b></a></a></li>
+            <li><a href="pfeature.html"><b>Premium</b></a></li>
+            <li><a href="userlog.html"><b>Login</b></a></li>
+            <li><a href="profile.html"><b>User Profile</b></a></li>
+            <li><a href="examdetail.html"><b>Exam Details</b></a></li>
+            <li><a href="apply.html"><b>Apply</b></a></li>
+            <li><a href="pay.html"><b>Payment</b></a></li>
+        </ul>
+    </nav>
+    <br><br>
+   <p><b>Registration open for MPSC & UPSC <br><br>
+    hurry up and register now...!</b>
+     
+    </p>
 
-        
-        <section class="study-material">
-            <h2>Study Material</h2>
-            <ul>
-                <li><a href="polity-notes.pdf" download>Polity Notes</a></li>
-                <li><a href="history-notes.pdf" download>History Notes</a></li>
-                <li><a href="economics-crash-course.pdf" download>Economics Crash Course</a></li>
-            </ul>
-        </section>
 
-        <!-- Timer Section -->
-        <section class="timer-section">
-            <h2>Mock Test Timer</h2>
-            <p>Time Remaining: <span id="time">60:00</span></p>
-        </section>
-</main>
-   <p><a href="examination.html">Back to Home</a></p>
-<script>
-   // Timer Functionality
-let time = 3600; // 60 minutes in seconds
-const timerElement = document.getElementById('time');
 
-function updateTimer() {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
-    timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    if (time > 0) {
-        time--;
-    }
-}
-
-setInterval(updateTimer, 1000);
-
-// Dark Mode Toggle
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-darkModeToggle.addEventListener('change', () => {
-    document.body.classList.toggle('dark-mode');
-});
-</script>
-<script src="grt-responsive-menu.js"></script>
-
+   
+    
+   
 </body>
 </html>
