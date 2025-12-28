@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC/MPSC Premium Features</title>
+    <link rel="stylesheet" href="feature.css">
+    <link rel="stylesheet" href="grt-responsive-menu.css">
+</head>
+<body>
+    <header class="header">
+        <h1>UPSC/MPSC Premium Dashboard</h1>
+    </header>
+    <main class="container">
+        
+        <section class="mock-tests">
+            <h2>Mock Tests</h2>
+            <button class="btn">Take a Premium Test</button>
+            <p>Access detailed solutions and analytics!</p>
+        </section>
+
+        
+        <section class="study-material">
+            <h2>Study Material</h2>
+            <ul>
+                <li><a href="polity-notes.pdf" download>Polity Notes</a></li>
+                <li><a href="history-notes.pdf" download>History Notes</a></li>
+                <li><a href="economics-crash-course.pdf" download>Economics Crash Course</a></li>
+            </ul>
+        </section>
+
+        <!-- Timer Section -->
+        <section class="timer-section">
+            <h2>Mock Test Timer</h2>
+            <p>Time Remaining: <span id="time">60:00</span></p>
+        </section>
+</main>
+   <p><a href="examination.html">Back to Home</a></p>
+<script>
+   // Timer Functionality
+let time = 3600; // 60 minutes in seconds
+const timerElement = document.getElementById('time');
+
+function updateTimer() {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+    timerElement.textContent = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    if (time > 0) {
+        time--;
+    }
+}
+
+setInterval(updateTimer, 1000);
+
+// Dark Mode Toggle
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+});
+</script>
+<script src="grt-responsive-menu.js"></script>
+
+</body>
+</html>
